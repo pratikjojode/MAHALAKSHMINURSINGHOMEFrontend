@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Table, Button, Popconfirm, message, Input, Modal } from "antd";
-import Layout from "../components/Layout";
+import Layout from "./Layout";
+
 import "../styles/AdminFeedback.css";
 import { CSVLink } from "react-csv"; // Import CSVLink for exporting data
 

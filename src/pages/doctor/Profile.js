@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Layout from "../../../../client/src/components/Layout";
+import Layout from "../../components/Layout";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { useParams } from "react-router-dom";
