@@ -1,12 +1,13 @@
 import React from "react";
 import { Form, Input, Button, message } from "antd";
-import "../styles/Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { showLoading, hideLoading } from "../redux/features/alertSlice";
 import loginImage from "../../src/images/image copy 13.png";
 import hello from "../../src/images/mdi_human-hello-variant.png";
+import { GoogleOutlined } from "@ant-design/icons";
+import "../styles/Login.css";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -20,74 +21,114 @@ const Login = () => {
       dispatch(hideLoading());
       if (res.data.success) {
         localStorage.setItem("token", res.data.token);
-        message.success("User login successfully!!");
+        message.success("Login successful!");
         navigate("/");
       }
     } catch (error) {
       dispatch(hideLoading());
       console.log(error);
-      message.error("Something went wrong during login");
+      message.error("Invalid credentials. Please try again.");
     }
   };
 
   return (
     <div className="login-container">
-      <div className="login-form">
-        <Form layout="vertical" onFinish={onFinishHandler} className="ant-form">
-          <div className="elements">
-            <h1 className="text-center welcome">
-              <span>Welcome</span> Back to Mahalaxmi Nursing Home
-              <img src={hello} alt="hello-icon" />
+      <div className="login-form-container">
+        <div className="login-form">
+          <div className="form-header">
+            <h1 className="welcome-text">
+              <span>Welcome</span> Back
+              <img src={hello} alt="hello-icon" className="hello-icon" />
             </h1>
-            <p className="text-center details">Please enter your details</p>
-            <button className="google-btn">Login with Google</button>
-            <p>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯OR⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯</p>
+            <p className="subtitle">Mahalaxmi Nursing Home</p>
+            <p className="instruction">Please enter your details</p>
           </div>
-          <Form.Item
-            label="Email"
-            name="email"
-            rules={[
-              {
-                required: true,
-                type: "email",
-                message: "Please enter your email",
-              },
-            ]}
-          >
-            <Input
-              type="email"
-              className="email-input"
-              placeholder="Please Enter Your email!!"
-            />
-          </Form.Item>
-          <Form.Item
-            label="Password"
-            name="password"
-            rules={[{ required: true, message: "Please enter your password" }]}
-          >
-            <Input
-              type="password"
-              className="pass"
-              placeholder="Please Enter Your Password!!"
-            />
-          </Form.Item>
-          <div className="forgot-password-container-2">
-            <Link to="/forgot-password" className="forgot-password-link-2">
-              Forgot Password?
-            </Link>
+
+          <button className="google-login-btn">
+            <GoogleOutlined className="google-icon" />
+            Continue with Google
+          </button>
+
+          <div className="divider">
+            <span className="divider-line"></span>
+            <span className="divider-text">OR</span>
+            <span className="divider-line"></span>
           </div>
-          <Form.Item>
-            <Button type="primary" htmlType="submit" className="login">
-              Login
-            </Button>
-          </Form.Item>
-          <Link to="/register" className="link">
-            Don't Have an Account? Register
-          </Link>
-        </Form>
+
+          <Form
+            layout="vertical"
+            onFinish={onFinishHandler}
+            className="auth-form"
+          >
+            <Form.Item
+              label="Email"
+              name="email"
+              rules={[
+                {
+                  required: true,
+                  type: "email",
+                  message: "Please enter a valid email",
+                },
+              ]}
+            >
+              <Input
+                type="email"
+                placeholder="Enter your email"
+                className="auth-input"
+              />
+            </Form.Item>
+
+            <Form.Item
+              label="Password"
+              name="password"
+              rules={[
+                { required: true, message: "Please enter your password" },
+                { min: 6, message: "Password must be at least 6 characters" },
+              ]}
+            >
+              <Input.Password
+                placeholder="Enter your password"
+                className="auth-input"
+              />
+            </Form.Item>
+
+            <div className="form-actions">
+              <Link to="/forgot-password" className="forgot-password">
+                Forgot Password?
+              </Link>
+            </div>
+
+            <Form.Item>
+              <Button
+                type="primary"
+                htmlType="submit"
+                className="login-btn"
+                block
+              >
+                Sign In
+              </Button>
+            </Form.Item>
+
+            <div className="register-cta">
+              Don't have an account?{" "}
+              <Link to="/register" className="register-link">
+                Register
+              </Link>
+            </div>
+          </Form>
+        </div>
       </div>
-      <div className="login-image">
-        <img src={loginImage} alt="Login" className="login-img" />
+
+      <div className="login-hero">
+        <div className="hero-overlay"></div>
+        <img src={loginImage} alt="Healthcare" className="hero-image" />
+        <div className="hero-content">
+          <h2>Compassionate Care for All</h2>
+          <p>
+            Your health is our priority. Access your medical records and connect
+            with our healthcare professionals.
+          </p>
+        </div>
       </div>
     </div>
   );
