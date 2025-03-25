@@ -1,0 +1,164 @@
+.booking-page {
+  padding: 20px;
+  background: linear-gradient(to bottom, #ffe0e0, #ffe6fa);
+  min-height: 100vh;
+  font-family: "Roboto", Arial, sans-serif;
+  color: #333;
+}
+
+.banner-1 {
+  text-align: center;
+  background: linear-gradient(to right, #ff7eb3, #ff758c);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner-1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.banner-title-1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.banner-description-1 {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #ffebf3;
+}
+
+.booking-title-1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 20px 0;
+  color: #222;
+  font-weight: bold;
+}
+
+.doctor-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+  transition: box-shadow 0.3s ease;
+}
+
+.doctor-details:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.doctor-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.doctor-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 4px solid #ff758c;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.doctor-image:hover {
+  transform: scale(1.05);
+}
+
+.doctor-text {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.doctor-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.doctor-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 5px 0;
+  color: #555;
+}
+
+.appointment-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.appointment-input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.appointment-input:focus {
+  border-color: #ff758c;
+  outline: none;
+}
+
+.appointment-btn {
+  background-color: rgba(0, 128, 0, 0.93);
+  border-radius: 50px;
+}
+
+.appointment-btn:hover {
+  background: linear-gradient(to right, #ff87c4, #ff8ca2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.availability-message {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.available {
+  color: #34a853;
+}
+
+.not-available {
+  color: #ea4335;
+}
+
+@media (max-width: 768px) {
+  .doctor-details {
+    flex-direction: column;
+  }
+  .banner-description-1 {
+    font-size: 18px;
+  }
+
+  .banner-1 {
+    padding: 0px;
+  }
+}

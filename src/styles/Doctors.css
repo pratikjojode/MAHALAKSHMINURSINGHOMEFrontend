@@ -1,0 +1,176 @@
+/* Doctor Card Styling */
+.doctor-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(136, 199, 254, 0.393);
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards; /* Fade-in animation */
+}
+
+.doctor-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Fade-in animation for doctor card */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.csv-custom-btn {
+  padding: 5px;
+
+  background-color: green;
+  position: absolute;
+  left: 2%;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 15px;
+}
+/* Doctor Image Container */
+.doctor-card-img-container {
+  height: 100px;
+  background-color: #436242;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  animation: zoomIn 0.6s ease-out forwards; /* Zoom-in animation */
+}
+
+/* Zoom-in effect for doctor image container */
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Doctor Image Styling */
+.doctor-card-img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+}
+
+.doctor-card-img:hover {
+  transform: scale(1.1); /* Image zoom effect on hover */
+}
+
+/* Doctor Meta Information */
+.doctor-card-meta {
+  margin: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.doctor-card-details {
+  margin-top: 12px;
+}
+
+.doctor-card-details p {
+  margin: 5px 0;
+}
+
+/* Button Container */
+.doctor-card-button-container {
+  margin-top: 10px;
+  opacity: 0;
+  animation: slideIn 0.6s ease-out forwards; /* Slide-in animation */
+}
+
+/* Slide-in animation for button container */
+@keyframes slideIn {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* App Section Background Styling */
+.app {
+  background-color: rgba(0, 128, 0, 0.482);
+}
+
+.app-1 {
+  background-color: rgba(0, 128, 4, 0.733);
+}
+
+.app-2 {
+  background-color: rgba(128, 6, 0, 0.868);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .doctor-card {
+    margin-bottom: 20px;
+  }
+
+  .doctor-card-button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .doctor-card-button-container button {
+    margin-bottom: 10px;
+  }
+}
+
+.search {
+  width: 100%;
+  margin: 10px;
+  border: 2px solid rgba(0, 0, 255, 0.285);
+  color: black;
+  border-radius: 10px;
+}
+.search ::placeholder {
+  color: black;
+  font-weight: 600;
+}
+.doc {
+  padding: 10px;
+  background-color: #e5d9f2; /* Soft lavender background */
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  text-align: center; /* Center text horizontally */
+}
+
+.doc:hover {
+  transform: scale(1.03); /* Slight scale effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+  background-color: #d0c0f5; /* Slightly darker background color on hover */
+}
+
+.doc h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #5a4f93; /* A rich purple color for the header */
+  margin-bottom: 20px;
+}
+
+.doc p {
+  font-size: 18px;
+  color: #333; /* Darker color for the paragraph */
+  line-height: 1.6; /* Increased line-height for better readability */
+  font-style: italic;
+}

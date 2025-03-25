@@ -1,0 +1,133 @@
+/* Main enquiry form container */
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding: 50px;
+  background: linear-gradient(135deg, #e3f2fd, #64b5f6);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 70%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.enquiry-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Form heading */
+.enquiry-form h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #002244;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Form label styling */
+.enquiry-form label {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #002244;
+}
+
+/* Input fields styling */
+.enquiry-form input,
+.enquiry-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  color: #333;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus effect for input fields */
+.enquiry-form input:focus,
+.enquiry-form textarea:focus {
+  border-color: #002244;
+  box-shadow: 0 0 10px rgba(0, 34, 68, 0.5);
+  outline: none;
+  background-color: #f0f8ff;
+}
+
+/* Textarea styling */
+.enquiry-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Button styling */
+.enquiry-form button {
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #002244, #00509e);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for button */
+.enquiry-form button:hover {
+  background: linear-gradient(135deg, #000000, #003366);
+  transform: scale(1.07);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Success/Failure status message */
+.status-message {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 12px;
+  background-color: #28a745; /* Green for success */
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.status-message.error {
+  background-color: #dc3545; /* Red for error */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .enquiry-form {
+    padding: 30px;
+    width: 90%;
+  }
+
+  .enquiry-form h2 {
+    font-size: 1.9rem;
+  }
+
+  .enquiry-form input,
+  .enquiry-form textarea {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .enquiry-form button {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+  }
+}

@@ -1,0 +1,61 @@
+/* Notification.css */
+
+.notification-title {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: #333;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.notification-container {
+  padding: 0 15px;
+}
+
+.notification-card {
+  background-color: #355d2b50;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.notification-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.notification-message {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #444;
+  margin: 0;
+}
+
+.mark-read-btn {
+  display: block;
+  margin: 15px auto;
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.mark-read-btn:hover {
+  background-color: #005bb5;
+}
+
+.no-notification {
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+  padding: 15px 0;
+}

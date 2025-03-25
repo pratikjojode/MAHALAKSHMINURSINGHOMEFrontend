@@ -1,0 +1,137 @@
+/* General Container for the Form */
+.apply-doctor-container {
+  padding: 60px;
+  background: linear-gradient(
+    135deg,
+    #f0f4ff,
+    #dbe9ff
+  ); /* Soft gradient background */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+  border-radius: 20px; /* Softer, more modern rounded corners */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 1s ease-out; /* Smooth fade-in effect */
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Form Header */
+.apply-doctor-container h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #334eaf; /* Modern dark blue for a professional look */
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Fields Styling */
+.apply-doctor-container form {
+  display: grid;
+  grid-gap: 30px; /* Enhanced spacing for better clarity */
+}
+
+/* Input Fields */
+.apply-doctor-container input[type="text"],
+.apply-doctor-container input[type="email"],
+.apply-doctor-container input[type="file"] {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #c0d3f0;
+  font-size: 1.1rem;
+  background: #ffffff;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle inset shadow */
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.apply-doctor-container input:focus {
+  border-color: #334eaf;
+  box-shadow: 0 0 12px rgba(51, 78, 175, 0.3); /* Enhanced focus glow */
+  outline: none;
+}
+
+/* Labels */
+.apply-doctor-container label {
+  font-size: 1rem;
+  color: #4a5d7d;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Button Styling */
+.apply-doctor-container button {
+  background: linear-gradient(135deg, #334eaf, #4a8def); /* Vibrant gradient */
+  color: #ffffff;
+  border: none;
+  padding: 16px 24px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  margin-top: 20px;
+  box-shadow: 0 12px 30px rgba(51, 78, 175, 0.3);
+}
+
+.apply-doctor-container button:hover {
+  background: linear-gradient(135deg, #2b439e, #3c78e0);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(51, 78, 175, 0.4);
+}
+
+/* Individual service circles */
+.services {
+  background: linear-gradient(145deg, #f6e58d, #ffbe76);
+  color: #333;
+  padding: 40px 30px; /* Enhanced padding */
+  border-radius: 15px; /* Rounded corners */
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(243, 156, 18, 0.85);
+  transition: right 0.3s ease;
+  z-index: -1;
+}
+
+.services:hover::before {
+  right: 0;
+}
+
+/* Media Query for small screens */
+@media (max-width: 768px) {
+  .apply-doctor-container {
+    padding: 40px;
+  }
+
+  .services {
+    padding: 30px 20px;
+    font-size: 1rem;
+  }
+}
+.new-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,333 @@
+/* Header Section - Premium Enhanced */
+.services-header {
+  background: linear-gradient(135deg, #002244 0%, #001a33 100%);
+  color: white;
+  padding: 60px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  margin: 30px auto;
+  position: relative;
+  max-width: 1400px;
+  overflow: hidden;
+}
+
+.services-header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 204, 0, 0.1) 0%,
+    transparent 70%
+  );
+  transform: rotate(30deg);
+  z-index: 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.header-content h1 {
+  font-size: 3.2rem;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  background: linear-gradient(to right, #ffffff 0%, #f1f1f1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
+  line-height: 1.2;
+}
+
+.header-content p {
+  font-size: 1.3rem;
+  margin: 15px 0 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+  max-width: 600px;
+}
+
+.header-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 25px;
+}
+
+.header-nav ul li a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  position: relative;
+  padding: 8px 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.header-nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ffcc00;
+  transition: width 0.3s ease;
+}
+
+.header-nav ul li a:hover {
+  color: white;
+}
+
+.header-nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Services Section - Premium Enhanced */
+.services-all {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  padding: 80px 40px;
+}
+
+.services-title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.services-title h1 {
+  font-size: 3.2rem;
+  color: #002244;
+  margin-bottom: 20px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.services-title h1::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #ffcc00, #ff9900);
+  border-radius: 2px;
+}
+
+.services-title p {
+  font-size: 1.25rem;
+  color: #5c6b7a;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Services Grid - Premium Enhanced */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08), 0 10px 10px rgba(0, 0, 0, 0.05);
+  padding: 40px 30px;
+  text-align: center;
+  border-top: 5px solid #ffcc00;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 34, 68, 0.03) 0%,
+    transparent 100%
+  );
+  z-index: 0;
+}
+
+.service-card:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-8px);
+}
+
+.service-icon {
+  font-size: 4.5rem;
+  color: #002244;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+}
+
+.service-card h2 {
+  font-size: 1.9rem;
+  color: #002244;
+  margin-bottom: 20px;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.service-card p {
+  color: #5c6b7a;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+/* Call to Action - Premium Enhanced */
+.cta-section {
+  text-align: center;
+  margin-top: 80px;
+  padding: 0 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #002244 0%, #001a33 100%);
+  color: white;
+  padding: 18px 36px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0, 34, 68, 0.3), 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: all 0.5s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 34, 68, 0.4), 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+/* Header Left Section - Premium Enhanced */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.header-left img {
+  width: 80px;
+  height: auto;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-left img:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .services-header {
+    padding: 50px 30px;
+    margin: 30px 20px;
+  }
+
+  .header-content h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .header-nav ul {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .services-title h1 {
+    font-size: 2.4rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-header {
+    padding: 40px 25px;
+    margin: 20px 15px;
+    border-radius: 12px;
+  }
+
+  .header-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .header-content p {
+    font-size: 1.1rem;
+  }
+
+  .services-title h1 {
+    font-size: 2rem;
+  }
+
+  .service-card {
+    padding: 30px 20px;
+  }
+}

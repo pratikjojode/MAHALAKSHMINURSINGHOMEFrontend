@@ -1,0 +1,113 @@
+/* Container for feedback cards with a refined gradient and subtle padding */
+.feedback-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px; /* Increased gap for better spacing */
+  padding: 30px;
+  margin-top: 20px;
+  background: linear-gradient(
+    135deg,
+    #cce7f7,
+    #a1d4f4
+  ); /* Softer blue gradient for the background */
+  border-radius: 10px; /* Rounded corners for the container */
+}
+
+/* Styling for individual feedback cards */
+.feedback-card {
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #d1f1fc
+  ); /* Soft cyan gradient */
+  border-radius: 16px; /* More rounded corners for a modern look */
+  padding: 20px; /* Increased padding for a cleaner look */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); /* Slightly lighter shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feedback-card:hover {
+  transform: translateY(-8px); /* Slight lift effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Card body with padding for better spacing */
+.feedback-card .ant-card-body {
+  padding: 16px;
+}
+
+/* Title inside feedback card with a prominent blue color */
+.feedback-card .ant-card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #004d73; /* Deeper blue color */
+  text-transform: uppercase; /* Adding uppercase for emphasis */
+  letter-spacing: 1px; /* Slight spacing for a polished look */
+  margin-bottom: 12px; /* Adding space below the title */
+}
+
+/* Styling for paragraph text with emphasis on readability */
+.feedback-card p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #565656; /* Soft dark gray text for better readability */
+  line-height: 1.6; /* Slightly increased line-height for better readability */
+}
+
+.feedback-card p strong {
+  color: #006f99; /* Bold blue for labels */
+}
+
+/* Rating stars with a warm, golden color */
+.feedback-card .ant-rate {
+  color: #ffb74d; /* Warm golden color for ratings */
+}
+
+/* Footer of the feedback card */
+.feedback-card .feedback-footer {
+  text-align: right;
+  font-size: 0.95rem;
+  color: #607d8b; /* Slate gray footer */
+  margin-top: 16px; /* Slightly increased margin for spacing */
+  font-style: italic; /* Adding an italic style for emphasis */
+}
+
+/* Icon (like star for ratings) with bright yellow color */
+.feedback-card i {
+  color: #ffeb3b; /* Bright yellow for stars */
+}
+
+/* Feedback button with a fresh, inviting blue background */
+.feedback-button {
+  background-color: #0288d1; /* Stronger blue for the button */
+  color: white;
+  border-radius: 8px; /* Softer, rounded corners */
+  border: none;
+  padding: 12px 20px; /* Slightly more padding for better click area */
+  font-weight: bold;
+  text-transform: uppercase; /* Uppercase for a strong appearance */
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.feedback-button:hover {
+  background-color: #0277bd; /* Slightly darker blue on hover */
+  transform: scale(1.05); /* Slight scale-up effect on hover */
+}
+
+/* Average ratings card styling */
+.average-ratings .ant-card {
+  border-radius: 16px; /* Rounded corners for the card */
+  padding: 20px;
+  background-color: #e3f2fd; /* Very light blue background for the card */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Average ratings text with bold, dark blue color */
+.average-ratings p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0288d1; /* Strong blue for emphasis */
+  margin-bottom: 12px; /* Space below the text */
+  text-align: center; /* Center the ratings text */
+  letter-spacing: 1px; /* Add a little spacing between characters */
+}

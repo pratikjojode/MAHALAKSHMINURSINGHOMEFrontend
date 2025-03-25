@@ -1,0 +1,153 @@
+/* Nurses Page - Premium Styling */
+.nurses-page {
+  background: linear-gradient(to bottom, #f8fafc 0%, #ffffff 100%);
+  min-height: calc(100vh - 160px);
+}
+
+.nurses-page h1 {
+  text-align: center;
+  font-size: 3.2rem;
+  color: #002244;
+  margin-bottom: 60px;
+  font-weight: 700;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+.nurses-page h1::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #ffcc00, #ff9900);
+  border-radius: 2px;
+}
+
+.nurses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.nurse-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+}
+
+.nurse-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.nurse-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 34, 68, 0.03) 0%,
+    transparent 100%
+  );
+  z-index: 0;
+}
+
+.nurse-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-bottom: 3px solid #ffcc00;
+  transition: transform 0.5s ease;
+}
+
+.nurse-card:hover img {
+  transform: scale(1.03);
+}
+
+.nurse-card-content {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.nurse-card h2 {
+  font-size: 1.6rem;
+  color: #002244;
+  margin-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.nurse-card p {
+  color: #5c6b7a;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.nurse-card p strong {
+  color: #002244;
+  font-weight: 600;
+}
+
+/* Specialization Badge */
+.nurse-card p:nth-of-type(2) {
+  position: relative;
+  padding-left: 25px;
+}
+
+.nurse-card p:nth-of-type(2)::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  color: #ffcc00;
+  font-size: 1.2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .nurses-page {
+    padding: 60px 30px;
+  }
+
+  .nurses-grid {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nurses-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+
+  .nurse-card {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .nurses-page {
+    padding: 50px 20px;
+  }
+
+  .nurses-page h1 {
+    font-size: 2.2rem;
+  }
+
+  .nurse-card-content {
+    padding: 25px;
+  }
+}

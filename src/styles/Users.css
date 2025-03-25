@@ -1,0 +1,104 @@
+/* Users.css */
+
+/* General Layout Styling */
+.users-container {
+  margin-bottom: 20px;
+}
+
+/* Card Styling */
+.ant-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.ant-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Card Cover (Avatar Section) */
+.card-cover {
+  height: 100px;
+  background-color: #a6aebf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.card-cover img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 10px;
+}
+
+/* Card Meta (User Name and Email) */
+.ant-card-meta-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.ant-card-meta-description {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Button Container */
+.card-buttons {
+  margin-top: 10px;
+}
+
+/* Button Styling */
+.ant-btn-primary {
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  border-radius: 4px;
+}
+
+.ant-btn-danger {
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .ant-card {
+    padding: 8px; /* Less padding on smaller screens */
+  }
+}
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 10px auto;
+}
+
+/* Custom Button Styling for CSV Download */
+
+.csv-btn {
+  padding: 20px;
+}
+.custom-csv-btn {
+  padding: 5px;
+  background-color: green;
+  position: absolute;
+  left: 0;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 15px;
+}
+.table-btn {
+  padding: 3px;
+  background-color: green;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 15px;
+  margin: 10px;
+  border: none;
+}

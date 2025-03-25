@@ -1,0 +1,185 @@
+.appointment-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  width: 100%;
+  background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Premium gradient */
+  padding: 40px 20px; /* Increased padding for spacing */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  color: #ffffff; /* Ensure text stands out */
+  text-align: center; /* Center the text */
+  margin-bottom: 20px; /* Spacing below the banner */
+  overflow: hidden;
+  position: relative;
+}
+
+.appointment-banner::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent);
+  transform: rotate(45deg);
+  z-index: 0;
+}
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.banner-content {
+  position: relative; /* Ensure content appears above the background effects */
+  z-index: 1;
+}
+
+.banner-content h1 {
+  font-size: 2.5rem; /* Larger and more prominent title */
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Slight letter spacing for a modern feel */
+  color: #fff;
+}
+
+.banner-content p {
+  font-size: 1.2rem; /* Slightly larger font for readability */
+  font-weight: 300;
+  line-height: 1.6;
+  color: #f0f0f0; /* Lighter text for contrast */
+  max-width: 600px; /* Limit text width for better readability */
+  margin: 0 auto; /* Center-align text */
+}
+
+.custom-card-1 {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px;
+  margin-bottom: 16px;
+}
+
+.custom-card-1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card-header h3 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.card-header .status {
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+}
+
+.card-header .status.completed {
+  background: #4caf50;
+}
+
+.card-header .status.pending {
+  background: #ff9800;
+}
+
+.card-header .status.cancelled {
+  background: #f44336;
+}
+
+.card-body p {
+  margin: 8px 0;
+}
+
+.card-body strong {
+  color: #ffd700; /* Highlighted key text */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .appointment-banner {
+    padding: 30px 15px;
+  }
+
+  .banner-content h1 {
+    font-size: 2rem; /* Adjust font size */
+    margin-bottom: 10px;
+  }
+
+  .banner-content p {
+    font-size: 1rem; /* Adjust font size */
+    max-width: 100%; /* Allow the text to expand */
+    margin: 0 10px;
+  }
+
+  .custom-card-1 {
+    padding: 15px;
+    margin-bottom: 12px;
+  }
+
+  .card-header h3 {
+    font-size: 1.125rem;
+  }
+
+  .card-header .status {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+
+  .card-body p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .appointment-banner {
+    padding: 25px 10px;
+  }
+
+  .banner-content h1 {
+    font-size: 1.75rem;
+  }
+
+  .banner-content p {
+    font-size: 0.9rem;
+    margin: 0 10px;
+  }
+
+  .custom-card-1 {
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+
+  .card-header h3 {
+    font-size: 1rem;
+  }
+
+  .card-header .status {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+  }
+
+  .card-body p {
+    font-size: 0.85rem;
+  }
+}

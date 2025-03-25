@@ -1,0 +1,147 @@
+/* Doctor List Page - Premium Styling */
+.doctor-page-container {
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  color: #2a3d45;
+}
+
+/* Hero Banner */
+.doctor-hero-banner {
+  height: 400px;
+  background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 119, 182, 0.8)),
+    url("https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.hero-overlay {
+  text-align: center;
+  padding: 0 20px;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+/* Doctors Container */
+.doctors-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #e71567;
+  border-radius: 2px;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #5c6b7a;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+/* No Doctors State */
+.no-doctors {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.empty-message {
+  font-size: 1.1rem;
+  color: #5c6b7a;
+}
+
+/* Doctors Grid */
+.doctors-grid {
+  margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .doctor-hero-banner {
+    height: 300px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctor-hero-banner {
+    height: 250px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,733 @@
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 128, 0, 0.77);
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out; /* Animation for smooth hover effect */
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.5s ease-in-out; /* Animation for text color change */
+}
+
+.navbar .nav-links a:hover {
+  color: #e71567; /* Hover effect */
+  transform: translateY(-3px);
+  transition: 0.5s ease-in-out;
+}
+
+.book {
+  color: white;
+  background-color: #e71567;
+  font-size: 18px;
+  border: 1px solid #e71567;
+  padding: 12px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.book:hover {
+  background-color: #e71567;
+  color: white;
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.navbar .cta-button {
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar .cta-button:hover {
+  background-color: #e6b800;
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Main Content Section */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+  opacity: 0;
+  animation: fadeIn 1s forwards; /* Fade-in animation */
+}
+
+.content-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px;
+  margin-left: 90px;
+  transform: translateX(-30px);
+  animation: slideInFromLeft 0.6s ease-out forwards; /* Slide-in animation */
+}
+
+.content-text h1 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 500;
+
+  opacity: 0;
+  animation: fadeInText 0.6s forwards; /* Fade-in for text */
+}
+
+.content-text h2 {
+  font-weight: 500;
+}
+
+.content-text p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.content-text h5 {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.book-appointment-button {
+  background-color: #e71567;
+  padding: 16px 24px;
+  width: 50%;
+  color: white;
+  border: 0;
+  border-radius: 9px;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeInText 0.6s 0.6s forwards; /* Fade-in animation */
+}
+
+/* Image Styling */
+.content-image img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  opacity: 0;
+  border-radius: 15px;
+  animation: fadeInImage 1s 0.5s forwards;
+}
+.begin {
+  color: #e71567;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .navbar .cta-button {
+    margin-top: 10px;
+  }
+
+  /* Main content adjustments for tablets and smaller screens */
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .content-text {
+    width: 90%; /* Reduced width for better alignment */
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .content-image img {
+    width: 90%;
+  }
+
+  .book-appointment-button {
+    width: 80%; /* Adjust button width for smaller screens */
+    margin-top: 20px;
+  }
+}
+.circles-1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f9f9f9, #d3e0f5);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #3a3a3a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  /* Navbar adjustments for mobile */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 10px;
+  }
+
+  .navbar .logo img {
+    width: 80px;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .navbar .cta-button {
+    margin-top: 15px;
+  }
+
+  /* Main content adjustments for mobile */
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .book-appointment-button {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .content-image {
+    width: 120%;
+    margin-left: 30px;
+    padding: 0px;
+  }
+
+  .content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 40px;
+    margin: 30px;
+    background-color: rgba(240, 128, 128, 0.222);
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.book-appointment-button:hover {
+  background-color: #e6b800;
+  transition: 0.5s;
+}
+/* General Banner Styling */
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(
+    135deg,
+    #e0f7fa,
+    #80deea
+  ); /* Light blue gradient for background */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for a premium feel */
+  margin: 20px 0;
+  animation: fadeIn 1.2s ease-out; /* Smooth fade-in animation */
+  cursor: pointer;
+}
+
+/* Card Styling */
+.b-1 {
+  background: linear-gradient(135deg, #0511f076, #8f94fb); /* Blue to purple */
+  background: url("../images/image.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 12px;
+  padding: 25px;
+  height: 30vh;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Depth shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1; /* Equal width */
+  border: 1px solid #e3e3e3;
+  position: relative; /* For adding decorative elements */
+  animation: slideUp 0.8s ease-out; /* Smooth slide-up animation */
+  overflow: hidden;
+}
+
+/* Card Hover Effects */
+.b-1:hover {
+  transform: translateY(-8px); /* Slight lift effect */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* More intense shadow on hover */
+}
+
+/* Dark overlay using pseudo-element for images */
+.image::after,
+.image-1::after,
+.image-2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Slightly darker overlay */
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Fade-in effect for the overlay on hover */
+.image:hover::after,
+.image-1:hover::after,
+.image-2:hover::after {
+  opacity: 1;
+}
+
+/* Smooth fade-in animation for the entire banner */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Smooth slide-up animation for cards */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title and Text Styling */
+.b-1 h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+  font-weight: 600;
+  animation: fadeInText 1.2s ease-out; /* Smooth fade-in for text */
+}
+
+/* Paragraph Styling */
+.b-1 p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  animation: fadeInText 1.5s ease-out; /* Smooth fade-in for text */
+}
+
+/* Smooth fade-in animation for text */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Button Styling */
+.b-1 button {
+  background-color: #e71567;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 3D button shadow */
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Hover Effects */
+.b-1 button:hover {
+  background-color: #e6b800;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  transform: translateY(-3px); /* Smooth lift effect */
+}
+
+/* Styling for Image Containers */
+.image {
+  background: url("../images/image copy 2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-1 {
+  background: url("../images/image copy 4.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-2 {
+  background: url("../images/image copy 3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 480px) {
+  .banner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+.faq {
+  margin: 20px auto;
+  align-items: center;
+  max-width: 90%;
+}
+.faq-item {
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.faq-item h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #003366;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.faq-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  display: none; /* Initially hide answers */
+}
+
+.faq-item.active p {
+  display: block; /* Display answer when active */
+}
+
+.faq-item:hover {
+  transform: translateY(-5px);
+}
+
+/* conatct form */
+.contact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+  background-color: #537ca448;
+}
+.contact-us h2 {
+  color: brown;
+  font-weight: 800;
+  font-size: 30px;
+}
+.contact-us p {
+  color: rgba(255, 0, 0, 0.554);
+  line-height: 0;
+}
+.contact-us form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-us input {
+  border: none;
+  padding: 10px;
+  margin: 10px 0px;
+  border-radius: 15px;
+  width: 50%;
+}
+.contact-us textarea {
+  border: none;
+  padding: 10px;
+  margin: 10px 0px;
+  border-radius: 15px;
+}
+.contact-us button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 255, 0.605);
+  width: 50%;
+}
+.siteMap {
+  margin-top: 10px;
+  padding: 0px 20px;
+}
+.siteMap h3 {
+  color: brown;
+  font-weight: 800;
+  font-size: 30px;
+}
+.siteMap p {
+  line-height: 0;
+  color: rgba(255, 0, 0, 0.597);
+}
+.siteMap ul li {
+  list-style: none;
+  font-size: 20px;
+}
+.siteMap ul {
+  padding: 10px;
+  margin: 40px 0px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.email-2 i {
+  margin-right: 10px;
+}
+.flex h5 {
+  font-weight: 800;
+}
+
+/* @ */
+@media (max-width: 480px) {
+  .contact {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: center;
+  }
+  .flex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .contact-us input {
+    width: 100%;
+  }
+  .contact-us button {
+    width: 100%;
+  }
+}
+.maternity-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.maternity-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.maternity-description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.maternity-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.maternity-card {
+  background: linear-gradient(135deg, #f4b6c2, #003366);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.maternity-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  background-color: #006699;
+}
+
+.maternity-card h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.maternity-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+.maternity-card:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #003366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: -1;
+}
+/* 🔹 Logo Container */
+.logo-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  border-radius: 10px;
+
+  transition: all 0.3s ease-in-out;
+}
+
+/* 🔹 Logo Image */
+.logo-main img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 🔹 Logo Text */
+.logo-main h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 🔹 Hover Effect */
+.logo-main:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.logo-main img:hover {
+  transform: scale(1.1);
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+  .logo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo h5 {
+    font-size: 1rem;
+  }
+}

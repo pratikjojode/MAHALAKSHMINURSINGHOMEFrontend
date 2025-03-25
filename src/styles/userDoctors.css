@@ -1,0 +1,238 @@
+/* 🔹 Card Container */
+.custom-card {
+  width: 420px;
+  background: linear-gradient(135deg, #8fa1b4 20%, #b0bccb 100%);
+  border-radius: 14px;
+  box-shadow: 0px 8px 20px rgba(154, 166, 178, 0.4);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+/* 🔹 Hover Effect */
+.custom-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 12px 28px rgba(154, 166, 178, 0.6);
+  background: linear-gradient(135deg, #b0bccb 10%, #8fa1b4 90%);
+}
+
+/* 🔹 Card Image */
+.custom-card img {
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.custom-card img:hover {
+  transform: scale(1.08);
+  opacity: 0.95;
+}
+
+/* 🔹 Doctors Section */
+.doctors-section {
+  background: rgba(102, 102, 203, 0.15);
+  padding: 50px;
+  border-radius: 18px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+  margin: 100px auto;
+}
+
+/* 🔹 Section Title */
+.section-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #2a2a2a;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/* 🔹 Card Header */
+.card-header {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* 🔹 Title in Card */
+.card-header h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 🔹 Button Styling */
+.btn-2 {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 128, 0, 0.8),
+    rgba(34, 177, 76, 0.9)
+  );
+  border: 0;
+  padding: 16px 26px;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 14px rgba(0, 128, 0, 0.4);
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.btn-2:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 6px 20px rgba(0, 128, 0, 0.7);
+  background: linear-gradient(135deg, rgba(34, 177, 76, 1), rgba(0, 128, 0, 1));
+}
+
+/* 🔹 Doctor Information */
+.doctor-info-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* 🔹 Doctor Image */
+.doctor-image-2 {
+  width: 320px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid white;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.doctor-image-2:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔹 Doctor Details */
+.doctor-details-2 {
+  line-height: 1.8;
+  padding: 28px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #8fa1b4, #b0bccb);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* 🔹 Doctor Name */
+.doctor-details-2 h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+/* 🔹 Specialization */
+.specialization {
+  font-size: 18px;
+  color: #444;
+  font-weight: 600;
+}
+
+/* 🔹 Description */
+.doctor-details-2 p {
+  font-size: 16px;
+  color: #666;
+  margin: 6px 0;
+}
+
+.doctor-details-2 p strong {
+  color: #222;
+}
+
+/* 🔹 Responsive Enhancements */
+@media (max-width: 992px) {
+  .custom-card {
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+  }
+
+  .btn-2 {
+    padding: 14px 22px;
+    font-size: 15px;
+  }
+
+  .doctor-image-2 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .doctor-details-2 {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .btn-2 {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+
+  .doctor-image-2 {
+    width: 220px;
+    height: 220px;
+  }
+
+  .doctor-details-2 {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-card {
+    width: 92%;
+    margin: 12px auto;
+  }
+
+  .btn-2 {
+    font-size: 14px;
+    padding: 12px 22px;
+  }
+
+  .doctor-details-2 h3 {
+    font-size: 20px;
+  }
+
+  .doctor-details-2 p {
+    font-size: 14px;
+  }
+
+  .doctor-image-2 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .doctor-details-2 {
+    padding: 18px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}

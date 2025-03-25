@@ -1,0 +1,103 @@
+.admin-feedback-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  background: linear-gradient(135deg, #e3f2fd, #90caf9);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-feedback-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #003366;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+}
+
+.feedback-table .ant-table {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.feedback-table .ant-table-thead > tr > th {
+  background-color: #003366;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  border-right: 1px solid black;
+}
+
+.feedback-table .ant-table-tbody > tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.feedback-table .ant-table-tbody > tr:hover {
+  background-color: #e6f7ff;
+}
+
+.feedback-table .ant-table-cell {
+  text-align: center;
+}
+
+.view-button {
+  color: #4caf50;
+  background-color: #003366;
+  margin-right: 5px;
+}
+
+.delete-button {
+  color: #e74c3c;
+  background-color: red;
+}
+
+.feedback-modal {
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.feedback-modal p {
+  margin-bottom: 12px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .admin-feedback-container h2 {
+    font-size: 2rem;
+  }
+
+  .feedback-table .ant-table {
+    width: 100%;
+  }
+
+  .feedback-table .ant-table-thead > tr > th,
+  .feedback-table .ant-table-tbody > tr > td {
+    font-size: 0.875rem;
+  }
+
+  .feedback-table .ant-table-cell {
+    padding: 8px;
+  }
+
+  .feedback-table .ant-table-thead > tr > th,
+  .feedback-table .ant-table-tbody > tr > td {
+    word-wrap: break-word;
+    word-break: break-word;
+    max-width: 100px;
+  }
+
+  .feedback-table .ant-table-thead > tr > th {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .view-button,
+  .delete-button {
+    font-size: 0.875rem;
+    padding: 5px 10px;
+  }
+}

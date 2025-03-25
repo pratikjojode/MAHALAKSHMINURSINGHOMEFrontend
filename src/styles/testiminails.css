@@ -1,0 +1,137 @@
+/* Testimonial Section */
+.testimonails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 10px;
+  animation: fadeIn 1s ease-in-out; /* Section fade-in animation */
+}
+
+/* Testimonial Images */
+.testimonails img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  animation: slideIn 0.8s ease-in-out; /* Slide-in animation */
+}
+
+.testimonails img:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Cards */
+.card-1,
+.card-2,
+.card-3 {
+  padding: 20px;
+  width: 90%;
+  max-width: 300px;
+  height: auto;
+  margin: 20px;
+  border-radius: 10%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: fadeInUp 1s ease-in-out; /* Fade-in and slide-up animation */
+}
+
+.card-1 {
+  background-color: rgba(255, 0, 0, 0.115);
+  box-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red;
+}
+
+.card-2 {
+  background-color: rgba(0, 0, 255, 0.081);
+  box-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue, 0 0 40px blue;
+}
+
+.card-3 {
+  background-color: rgba(255, 255, 0, 0.048);
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.579),
+    0 0 20px rgba(255, 255, 0, 0.696), 0 0 30px yellow, 0 0 40px yellow;
+}
+
+.card-1:hover,
+.card-2:hover,
+.card-3:hover {
+  transform: translateY(-5px); /* Small lift effect on hover */
+}
+
+/* Heading Animation */
+.comma h1 {
+  position: absolute;
+  font-size: 2rem;
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation for heading */
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Slight upward slide */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px); /* Slide from left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-1,
+  .card-2,
+  .card-3 {
+    width: 100%;
+    max-width: 250px;
+    margin: 10px;
+  }
+
+  .testimonails img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .comma h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-1,
+  .card-2,
+  .card-3 {
+    max-width: 300px;
+    margin: 10px auto;
+  }
+
+  .testimonails img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .comma h1 {
+    font-size: 1.2rem;
+  }
+}

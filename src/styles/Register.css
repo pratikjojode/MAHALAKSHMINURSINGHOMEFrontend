@@ -1,0 +1,46 @@
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-form {
+  flex: 1;
+}
+
+.login-image {
+  flex: 1;
+}
+
+.welcome {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.details {
+  margin-bottom: 20px;
+}
+.password,
+.email,
+.name {
+  border: 1px solid #d9d9d9;
+  width: 100%;
+
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.google-btn {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #4285f4; /* Google color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.ant-form {
+  max-width: 400px;
+  margin: auto;
+}
